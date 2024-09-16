@@ -405,7 +405,7 @@ const SPACEBASE_UPGS = {
         bulk:a=>a.div(1e100).log(10).sumBase(1.05,true).add(1).floor(),
         res: "observ",
         effect(a) {
-            let x = a.pow_base(1.5).log10().pow(2)
+            let x = a.add(1).pow_base(1.5).log10().pow(2)
             return x
         },
         effDesc: x=>formatMult(x),
